@@ -1,6 +1,13 @@
+$main-font: 10px;
+$h2_text: 2.4rem;
+$p_text: 1.6rem;
+
+$color: #848484;
+
 body,
 html {
-  font-size: 14px;
+  min-width: 1600px;
+  font-size: $main-font;
 }
 
 .header_Photo {
@@ -11,7 +18,7 @@ html {
 }
 
 .header_glow_icon {
-  margin-top: 7rem;
+  margin-top: 10rem;
 }
 
 .header_os_icon {
@@ -20,13 +27,68 @@ html {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 3rem;
+  margin-top: 4rem;
   text-align: center;
 
   .header_os_icon-bgCirle {
-    width: 45px;
-    height: 45px;
-    border-radius: 2rem;
-    background-color: grey;
+    width: 50px;
+    height: 50px;
+    border-radius: 3rem;
+    background-color: rgba(3, 3, 3, 0.5);
+    margin-right: 1.6rem;
   }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  img {
+    padding-top: 20%;
+  }
+}
+
+.header_arrow_to_phone {
+  display: inline-block;
+  margin-top: 5rem;
+  margin-bottom: 34rem;
+}
+
+//feature block!
+
+.feature_block {
+  position: relative;
+  margin-left: 27rem;
+  margin-right: 27rem;
+  border: 1px solid black;
+}
+
+.feature_text {
+  display: flex;
+  flex-direction: row;
+  // border: 1px solid black;
+  // justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: (100%/2);
+
+  li:last-child {
+    align-self: flex-end;
+  }
+
+  p {
+    font-size: $p_text;
+    color: $color;
+  }
+
+  h2 {
+    font-size: $h2_text;
+  }
+}
+
+.phone_view {
+  width: 55%;
+  position: absolute;
+  left: (100%/3);
+  top: -75%;
 }
