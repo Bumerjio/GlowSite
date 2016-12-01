@@ -6,12 +6,23 @@ $color: #848484;
 
 @font-face {
   src: url(../../newProj/fonts/MyridPro/MyriadPro-Cond.otf);
+  src: url(../../newProj/fonts/Helvetica/HelveticaNeueCyr-Light.otf);
 }
 
 body,
 html {
   // width: 100%;
   font-size: $main-font;
+}
+
+.extend_Text-h2 {
+  font-family: MyridPro;
+  font-size: $h2_text;
+}
+
+.extend_Text-p {
+  font-family: HelveticaNeueCyr-Light;
+  font-size: $p_text;
 }
 
 .header_Photo {
@@ -61,11 +72,6 @@ html {
   }
 }
 
-.header_os_icon-fill {
-  fill: red;
-  fill-opacity: 1;
-}
-
 .header_arrow_to_phone {
   display: inline-block;
   margin-top: 5rem;
@@ -86,6 +92,7 @@ html {
   justify-content: space-between;
   list-style: none;
   margin: 0;
+  margin-bottom: 17rem;
   padding: 0;
 
   li {
@@ -99,6 +106,7 @@ html {
   p {
     font-size: $p_text;
     color: $color;
+    font-family: HelveticaNeueCyr-Light;
   }
 
   h2 {
@@ -115,4 +123,39 @@ html {
   position: absolute;
   top: -89%;
   left: -10%;
+}
+
+//video block;
+
+.video_block {
+  background-color: #e8e8e8;
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+
+  .blocks {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    max-width: 75%;
+
+    @extend .extend_Text-h2;
+    @extend .extend_Text-p;
+  }
+
+  li {
+    width: (100%/2);
+    padding: 0 5% 0 0;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blocks_left_column {
+
+  }
 }
