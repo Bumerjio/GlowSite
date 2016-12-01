@@ -8,12 +8,12 @@ html {
   font-size: 10px;
 }
 
-.extend_Text-h2, .video_block .blocks {
+.extend_Text-h2, .video_block .blocks, .awesome_block {
   font-family: MyridPro;
   font-size: 2.4rem;
 }
 
-.extend_Text-p, .video_block .blocks {
+.extend_Text-p, .video_block .blocks, .awesome_block {
   font-family: HelveticaNeueCyr-Light;
   font-size: 1.6rem;
 }
@@ -138,4 +138,27 @@ html {
 .video_block iframe {
   width: 100%;
   height: 100%;
+}
+
+.center_text {
+  text-align: center;
+  margin: 5rem auto 10rem;
+  width: 69%;
+}
+
+.awesome_icons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+  margin: 0 15% 5%;
+  padding: 0;
+}
+
+.awesome_icons li {
+  padding: 0 0 5rem;
+  width: 33.33333%;
+  position: relative;
 }

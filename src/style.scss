@@ -154,8 +154,33 @@ html {
     width: 100%;
     height: 100%;
   }
+}
+//awsome block
+.center_text {
+  text-align: center;
+  margin: 5rem auto 10rem;
+  width: 69%;
+}
 
-  .blocks_left_column {
+.awesome_block {
+  @extend .extend_Text-h2;
+  @extend .extend_Text-p;
+}
 
+.awesome_icons {
+  // border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+  margin: 0 15% 5%;
+  padding: 0;
+
+  li {
+    padding: 0 0 5rem;
+    width: (100%/3);
+    position: relative;
   }
 }
