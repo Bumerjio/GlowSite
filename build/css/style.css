@@ -1,6 +1,9 @@
+@font-face {
+  src: url(../../newProj/fonts/MyridPro/MyriadPro-Cond.otf);
+}
+
 body,
 html {
-  min-width: 1600px;
   font-size: 10px;
 }
 
@@ -33,12 +36,25 @@ html {
   margin-right: 1.6rem;
 }
 
+.header_os_icon li:hover {
+  background-color: #030303;
+}
+
 .header_os_icon li:last-child {
   margin-right: 0;
 }
 
+.header_os_icon a {
+  display: block;
+}
+
 .header_os_icon img {
   padding-top: 20%;
+}
+
+.header_os_icon-fill {
+  fill: red;
+  fill-opacity: 1;
 }
 
 .header_arrow_to_phone {
@@ -49,22 +65,25 @@ html {
 
 .feature_block {
   position: relative;
-  margin-left: 27rem;
-  margin-right: 27rem;
-  border: 1px solid black;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .feature_text {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 50%;
 }
 
-.feature_text li:last-child {
-  align-self: flex-end;
+.feature_text li {
+  width: 33.33333%;
+}
+
+.feature_text li:nth-child(2) {
+  flex-basis: 58%;
 }
 
 .feature_text p {
@@ -74,11 +93,15 @@ html {
 
 .feature_text h2 {
   font-size: 2.4rem;
+  font-family: MyridPro;
 }
 
-.phone_view {
-  width: 55%;
+.phone_view-position {
+  position: relative;
+}
+
+.phone_view-photo {
   position: absolute;
-  left: 33.33333%;
-  top: -75%;
+  top: -89%;
+  left: -10%;
 }
