@@ -2,7 +2,8 @@ $main-font: 10px;
 $p_text: 1.6rem;
 $h2_text: 2.4rem;
 
-$color: #848484;
+$color: #e8e8e8;
+$text_color: #848484;
 
 @font-face {
   src: url(../../newProj/fonts/MyridPro/MyriadPro-Cond.otf);
@@ -65,6 +66,11 @@ html {
 
   a {
     display: block;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   img {
@@ -81,37 +87,29 @@ html {
 //feature block!
 
 .feature_block {
-  position: relative;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-.feature_text {
+  // position: relative;
+  padding: 5% 15% 15%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  margin-bottom: 17rem;
-  padding: 0;
 
-  li {
-    width: (100%/3);
+  div {
+    // outline: 1px solid black;
+    // width: (100%/3.5);
   }
 
-  li:nth-child(2) {
-    flex-basis: 58%;
-  }
-
-  p {
-    font-size: $p_text;
-    color: $color;
-    font-family: HelveticaNeueCyr-Light;
+  div:nth-child(2) {
+    flex-basis: 100%;
   }
 
   h2 {
     font-size: $h2_text;
-    font-family: MyridPro;
+    font-family: MyriadPro-Cond;
+  }
+
+  p {
+    font-size: $p_text;
+    color: $text_color;
+    font-family: HelveticaNeueCyr-Light;
   }
 }
 
@@ -120,15 +118,15 @@ html {
 }
 
 .phone_view-photo {
+  // width: 33%;
   position: absolute;
-  top: -89%;
-  left: -10%;
+  top: 60%;
+  left: 32%;
 }
-
 //video block;
 
 .video_block {
-  background-color: #e8e8e8;
+  background-color: $color;
   padding-top: 5.5rem;
   padding-bottom: 2rem;
 
@@ -182,5 +180,109 @@ html {
     padding: 0 0 5rem;
     width: (100%/3);
     position: relative;
+  }
+
+  .lineIcon {
+    width: 2px;
+    height: 5px;
+    background-color: grey;
+  }
+
+  li {
+    position: relative;
+
+    &:first-child::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #e3e3e3;
+      top: -20%;
+      left: 99%;
+    }
+
+    &:first-child::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 120%;
+      background-color: #e3e3e3;
+      top: 30%;
+      left: 50%;
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(2)::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #e3e3e3;
+      top: -20%;
+      left: 99%;
+    }
+
+    &:nth-child(2)::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 120%;
+      background-color: #e3e3e3;
+      top: 30%;
+      left: 50%;
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(3)::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 120%;
+      background-color: #e3e3e3;
+      top: 30%;
+      left: 50%;
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(5)::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #e3e3e3;
+      top: 0;
+      left: 99%;
+    }
+
+    &:nth-child(5)::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #e3e3e3;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+//price_Block
+
+.price_Block {
+  padding-top: 5rem;
+  background-color: $color;
+
+  @extend .extend_Text-h2;
+  @extend .extend_Text-p;
+
+  .center_text {
+    margin: 0 auto;
   }
 }
