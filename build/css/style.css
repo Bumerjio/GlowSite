@@ -8,12 +8,12 @@ html {
   font-size: 10px;
 }
 
-.extend_Text-h2, .video_block .blocks, .awesome_block, .price_Block {
+.extend_Text-h2, .video_block .blocks, .awesome_block {
   font-family: MyridPro;
   font-size: 2.4rem;
 }
 
-.extend_Text-p, .video_block .blocks, .awesome_block, .price_Block {
+.extend_Text-p, .video_block .blocks, .awesome_block {
   font-family: HelveticaNeueCyr-Light;
   font-size: 1.6rem;
 }
@@ -251,4 +251,10 @@ html {
 
 .price_Block .center_text {
   margin: 0 auto;
+}
+
+.price_Block .price_table {
+  text-align: center;
+  outline: 1px solid black;
+  display: inline-block;
 }

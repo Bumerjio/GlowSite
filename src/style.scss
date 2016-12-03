@@ -279,10 +279,13 @@ html {
   padding-top: 5rem;
   background-color: $color;
 
-  @extend .extend_Text-h2;
-  @extend .extend_Text-p;
-
   .center_text {
     margin: 0 auto;
+  }
+
+  .price_table {
+    text-align: center;
+    outline: 1px solid black;
+    display: inline-block;
   }
 }
